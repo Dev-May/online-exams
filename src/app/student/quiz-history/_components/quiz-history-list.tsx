@@ -3,7 +3,7 @@ import { getUserHistory } from "../_actions/quiz-history.action";
 
 export default async function QuizHistoryList() {
   // Variables
-  const [payload] = await catchError(() => getUserHistory());
+  const [ payload ] = await catchError(() => getUserHistory());
 
   if (!payload || !payload.history || payload.history.length === 0) {
     return (

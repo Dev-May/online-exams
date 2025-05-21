@@ -7,7 +7,6 @@ import CustomSidebar from "@/components/layout/sidebar/sidebar";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { signOut } from "next-auth/react";
-
 import { ReactNode } from "react";
 
 export default function Layout({ children }: { children: ReactNode }) {

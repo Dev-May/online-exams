@@ -133,7 +133,6 @@ export default function LoginForm() {
               variant={"link"}
               className="text-brand p-0 h-auto ml-auto"
               onClick={(e) => {
-                console.log("Recover Password clicked");
                 router.push("/auth/forgot-password");
               }}
             >
@@ -164,7 +163,7 @@ export default function LoginForm() {
       {/* Footer */}
       <CardFooter className="flex flex-col ">
         <p className="text-muted-foreground">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <Button
             variant={"link"}
             className="p-0 h-auto"

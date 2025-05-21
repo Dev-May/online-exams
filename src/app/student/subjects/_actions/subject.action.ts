@@ -7,10 +7,10 @@ import { getAuthHeader } from "@/lib/utils/auth-header";
 export async function addSubjectAction(fields: AddSubjectFields) {
   const formData = new FormData();
 
-  for (const key in fields) {
-    const value = (fields as any)[key];
+  for (const key of Object.keys(fields) as Array<keyof AddSubjectFields>) {
+    const value = fields[key];
     if (value !== undefined && value !== null) {
-      formData.append(key, value);
+      formData.append(key as string, value as string | Blob);
     }
   }
 
@@ -34,8 +34,8 @@ export async function updateSubjectAction(
 ) {
   const formData = new FormData();
 
-  for (const key in fields) {
-    const value = (fields as any)[key];
+  for (const key of Object.keys(fields) as Array<keyof AddSubjectFields>) {
+    const value = fields[key];
     if (value !== undefined && value !== null) {
       formData.append(key, value);
     }
@@ -48,9 +48,9 @@ export async function updateSubjectAction(
     },
   });
 
-  // const payload: APIResponse<UpdateSubjectResponse> = await response.json();
+  const payload: APIResponse<SubjectResponse> = await response.json(); //? here we can return what ever back from the server
 
-  // return payload;
+  return payload;
 }
 
 // Delete Subject Action

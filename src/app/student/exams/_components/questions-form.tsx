@@ -76,14 +76,6 @@ export default function QuestionsForm({ questions }: QuestionsFormProps) {
     });
   };
 
-  // Effect
-  // useEffect(() => {
-  //   const currentAnswer = form.getValues(`answers.${step}`);
-  //   void currentAnswer;
-
-  //   setAnswer("");
-  // }, [step, form]);
-
   return (
     <>
       {/* Header */}
