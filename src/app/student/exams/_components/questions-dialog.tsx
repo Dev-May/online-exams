@@ -15,7 +15,6 @@ export default async function QuestionsDialog({
   const [payload, error] = await catchError(() =>
     getQuestions(convertSearchParams(searchParams).toString())
   );
-  console.log(payload);
 
   if (error) return <p>{error}</p>;
 

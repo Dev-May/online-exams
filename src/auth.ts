@@ -28,8 +28,6 @@ export const authOptions: NextAuthOptions = {
 
         const payload: APIResponse<LoginResponse> = await response.json();
 
-        console.log(payload);
-
         if ("code" in payload) {
           throw new AuthenticationError(payload.message);
         }

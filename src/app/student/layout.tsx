@@ -1,6 +1,6 @@
 "use client";
+
 import Header from "@/components/layout/header/header";
-import { useState } from "react";
 import {
   Brain,
   History,

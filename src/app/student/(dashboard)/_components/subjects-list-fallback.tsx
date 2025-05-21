@@ -1,6 +1,9 @@
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function SubjectsListFallback() {
+  // Constants
+  const SUBJECTS_List = 6
+
   return (
     <section className="shadow-subtle px-4 py-8 rounded-[20px]">
       {/* Section Title */}
@@ -11,7 +14,7 @@ export default function SubjectsListFallback() {
 
       {/* Subjects List */}
       <ul className="grid grid-cols-3 gap-x-5 gap-y-6">
-        {[...Array(6)].map((_, index) => (
+        {[...Array(SUBJECTS_List)].map((_, index) => (
           <li
             key={index}
             className="relative rounded-md overflow-hidden shadow-elevated-glow h-72"

@@ -8,6 +8,7 @@ type SubjectsListProps = {
 };
 
 export default async function SubjectsList({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   searchParams,
 }: SubjectsListProps) {
   const [payload] = await catchError(getSubjects);

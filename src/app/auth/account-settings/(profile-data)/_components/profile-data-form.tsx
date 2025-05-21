@@ -54,7 +54,7 @@ export default function ProfileDataForm() {
 
   // Functions
   const onSubmit: SubmitHandler<ProfileDataFields> = (values) => {
-    console.log(values);
+    void values;
   };
 
   return (

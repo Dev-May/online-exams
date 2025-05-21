@@ -5,7 +5,6 @@ import {
   buildStyles,
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import { ShowResultsDialog } from "./show-results-dialog";
 
 type ScoreProps = {
   results: CheckResponse | null;
